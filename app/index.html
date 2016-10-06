@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Front end of our Tutor App</title>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-cookie/angular-cookie.min.js"></script>
+    <script src="bower_components/ng-token-auth/dist/ng-token-auth.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main_ctrl.js"></script>
+    <script src="scripts/controllers/login_ctrl.js"></script>
+    <script src="scripts/controllers/reviews_ctrl.js"></script>
+
+  </head>
+  <body ng-app="tutor-app" ng-controller="MainCtrl as main">
+    <div>
+      <p>{{ main.text }}</p>
+      <ui-view></ui-view>
+    </div>
+  </body>
+</html>
