@@ -1,5 +1,5 @@
 # angular-for-tutor-app
-Front-end code for Tutor App
+Front-end code for [Tutor App](https://github.com/hernanat/tutor_app)
 
 ## How to get it up and running
 I use [http-server](https://github.com/indexzero/http-server) to serve the app, so after install that using node:
