@@ -4,7 +4,9 @@
   angular.module('tutor-app', ['ui.router', 'ng-token-auth'])
     .config(config);
 
-  function config($stateProvider, $urlRouterProvider, $authProvider){
+  config.inject = ['$stateProvider', '$urlRouterProvider', '$authProvider', '$locationProvider']
+
+  function config($stateProvider, $urlRouterProvider, $authProvider, $locationProvider){
     $urlRouterProvider.otherwise('/home');
     $stateProvider
       .state('home', {
@@ -32,6 +34,8 @@
     $authProvider.configure({
       apiUrl: 'http://tutor-app-tangcongyuan.c9users.io'
     });
+
+    $locationProvider.html5Mode(true);
   }
 
 })();
