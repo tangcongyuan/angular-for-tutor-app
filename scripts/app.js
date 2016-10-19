@@ -32,7 +32,7 @@
         controller: 'LoginCtrl as login'
       });
     $authProvider.configure({
-      apiUrl: 'http://tutor-app-tangcongyuan.c9users.io'
+      apiUrl: 'http://tutor-app-tangcongyuan-1.c9users.io'
     });
 
     $locationProvider.html5Mode(true);
