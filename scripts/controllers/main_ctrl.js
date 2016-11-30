@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('tutor-app')
+  angular.module('angular-app')
     .controller('MainCtrl', MainCtrl);
 
   // When not injecting $scope, must use Controller As syntax. Because that way

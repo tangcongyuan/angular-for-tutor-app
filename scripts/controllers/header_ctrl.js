@@ -1,13 +1,15 @@
 (function(){
   'use strict';
 
-  angular.module('tutor-app')
+  angular.module('angular-app')
     .controller('HeaderCtrl', HeaderCtrl);
 
-  HeaderCtrl.$inject = ["$scope", "$location"];
+  HeaderCtrl.$inject = ["$location"];
 
-  function HeaderCtrl($scope, $location){
-    $scope.isActive = function (viewLocation) {
+  function HeaderCtrl($location){
+    var vm = this;
+    vm.isActive = function (viewLocation) {
+      console.log($location.path());
       return viewLocation === $location.path();
     };
   }
