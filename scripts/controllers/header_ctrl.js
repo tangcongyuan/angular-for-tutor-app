@@ -9,7 +9,6 @@
   function HeaderCtrl($location){
     var vm = this;
     vm.isActive = function (viewLocation) {
-      console.log($location.path());
       return viewLocation === $location.path();
     };
   }

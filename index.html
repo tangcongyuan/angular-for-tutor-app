@@ -22,6 +22,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main_ctrl.js"></script>
@@ -46,14 +47,13 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse" ng-controller="HeaderCtrl as header">
           <ul class="nav navbar-nav">
-            <li ng-class="{ active: header.isActive('/')}"><a href="/#/">Home</a></li>
-            <li ng-class="{ active: header.isActive('/reviews')}"><a href="/#/reviews">Reviews</a></li>
-            <li ng-class="{ active: header.isActive('/about')}"><a href="/#/">About</a></li>
-            <li ng-class="{ active: header.isActive('/contact')}"><a href="/#/">Contact</a></li>
+            <li ng-class="{ active: header.isActive('/portfolio')}"><a href="/#/portfolio">Portfolio</a></li>
+            <li ng-class="{ active: header.isActive('/contact')}"><a href="/#/contact">Contact</a></li>
+            <li ng-class="{ active: header.isActive('/about')}"><a href="/#/about">About</a></li>
           </ul>
           <div class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/">Sign in</a></li>
                 <li><a href="/">Sign out</a></li>
@@ -65,6 +65,8 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
+    <ui-view></ui-view>
 
   </body>
 </html>
